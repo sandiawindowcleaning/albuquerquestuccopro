@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "google-search-console": {
+      "command": "node",
+      "args": ["tools/gsc-mcp/server.mjs"],
+      "env": {
+        "GSC_KEY_FILE": "${HOME}/.config/gsc-mcp/albuquerquestucco.json",
+        "GSC_SITE_URL": "sc-domain:albuquerquestuccopro.com"
+      }
+    }
+  }
+}

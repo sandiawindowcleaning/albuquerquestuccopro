@@ -1,0 +1,73 @@
+{
+  "og-default": {
+    "hash": "1b6bf451",
+    "width": 1200,
+    "height": 630,
+    "widths": [
+      1200
+    ],
+    "formats": [
+      "jpg"
+    ]
+  },
+  "photo-addition-finish-coat": {
+    "hash": "168445a0",
+    "width": 770,
+    "height": 906,
+    "widths": [
+      480,
+      768,
+      770
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "photo-gray-stucco-wall": {
+    "hash": "63ee82ae",
+    "width": 1122,
+    "height": 884,
+    "widths": [
+      480,
+      768,
+      1024,
+      1122
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "photo-window-bay-patch": {
+    "hash": "a181a07f",
+    "width": 760,
+    "height": 922,
+    "widths": [
+      480,
+      760
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "photo-window-openings": {
+    "hash": "15176f4c",
+    "width": 770,
+    "height": 886,
+    "widths": [
+      480,
+      768,
+      770
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+# Netlify redirects. Rules are checked top to bottom; first match wins.
+#
+# Trailing slashes: every page lives at dist/<path>/index.html and every
+# canonical, sitemap URL and internal link ends in "/". Netlify serves the
+# with-slash URL directly and 301s the no-slash version to it, so no rules are
+# needed for that here.
+
+# Force the bare domain (canonical host). Netlify's primary domain must be
+# albuquerquestuccopro.com (non-www) to match the canonicals and sitemap.
+https://www.albuquerquestuccopro.com/*  https://albuquerquestuccopro.com/:splat  301!
+http://www.albuquerquestuccopro.com/*   https://albuquerquestuccopro.com/:splat  301!
+
+# Send the default Netlify subdomain to the real domain so Google only
+# indexes one. Assumes the Netlify site is named "albuquerquestuccopro"; if you
+# name it something else, change both lines. Deploy previews
+# (deploy-preview-N--albuquerquestuccopro.netlify.app) aren't affected.
+https://albuquerquestuccopro.netlify.app/*  https://albuquerquestuccopro.com/:splat  301!
+http://albuquerquestuccopro.netlify.app/*   https://albuquerquestuccopro.com/:splat  301!
+
+# Friendly aliases
+/quote-request/   /quote/          301
+/free-quote/      /quote/          301
+/locations/*      /service-areas/:splat  301
+/areas/*          /service-areas/:splat  301
+
+# Add old URLs from a previous site here, format:  /old-path/  /new-path/  301
+
+# Catch-all. Must stay LAST. Real pages are files on disk, which Netlify serves
+# before reaching this rule, so anything that gets here really is missing:
+# serve the prerendered 404 page with a true 404 status.
+/*   /404.html   404

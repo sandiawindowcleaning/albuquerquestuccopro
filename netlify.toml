@@ -1,0 +1,8 @@
+# Netlify reads this on every deploy from GitHub. Build settings live here,
+# not in the Netlify UI, so they are versioned with the code.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

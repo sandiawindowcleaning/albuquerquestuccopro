@@ -1,0 +1,21 @@
+/* Self-hosted fonts (no Google Fonts request). Latin subsets only. */
+@import '@fontsource/fraunces/latin-600.css';
+@import '@fontsource-variable/inter/wght.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 7rem;
+  }
+  body {
+    @apply bg-sand-50 font-sans text-ink antialiased;
+    font-size: 17px;
+  }
+  ::selection {
+    @apply bg-chile-100 text-ink;
+  }
+}
