@@ -54,7 +54,7 @@ const AREAS_CRUMB: Crumb = { name: 'Service Areas', path: PATHS.areas };
 export const PAGES: PageDef[] = [
   page({
     path: '/',
-    title: 'Stucco Repair & Re-Stucco Albuquerque | Albuquerque Stucco',
+    title: 'Stucco Repair & Re-Stucco in Albuquerque, NM | ABQ Stucco',
     description:
       'Stucco repair, color coats, re-stucco and water damage repair for Albuquerque-area homes. Texture and color matched. Book a free on-site estimate.',
     crumbs: [],
@@ -66,7 +66,7 @@ export const PAGES: PageDef[] = [
   }),
   page({
     path: PATHS.services,
-    title: 'Stucco Services in Albuquerque | Albuquerque Stucco',
+    title: 'Stucco Services in Albuquerque, NM | Albuquerque Stucco',
     description:
       'Stucco repair, re-stucco, color coats, water damage and parapet repair, EIFS repair and garden walls across the Albuquerque area.',
     crumbs: [SERVICES_CRUMB],
@@ -87,7 +87,7 @@ export const PAGES: PageDef[] = [
   ),
   page({
     path: PATHS.areas,
-    title: 'Stucco Service Areas | Albuquerque Stucco',
+    title: 'Stucco Service Areas Around Albuquerque, NM | ABQ Stucco',
     description:
       'Albuquerque Stucco works in Albuquerque, Rio Rancho, Corrales, Los Ranchos, Bernalillo, Placitas, Los Lunas, the East Mountains and nearby.',
     crumbs: [AREAS_CRUMB],
@@ -116,7 +116,7 @@ export const PAGES: PageDef[] = [
   }),
   page({
     path: PATHS.gallery,
-    title: 'Stucco Project Gallery | Albuquerque Stucco',
+    title: 'Stucco Project Gallery, Albuquerque NM | Albuquerque Stucco',
     description:
       'Stucco repairs, color coats and re-stucco projects around Albuquerque. See colors and textures on your own walls at a free estimate.',
     crumbs: [{ name: 'Gallery', path: PATHS.gallery }],
@@ -131,7 +131,7 @@ export const PAGES: PageDef[] = [
   }),
   page({
     path: PATHS.faq,
-    title: 'Stucco FAQ | Albuquerque Stucco',
+    title: 'Albuquerque Stucco FAQ: Repair, Recoats & Re-Stucco',
     description:
       'Answers about stucco in Albuquerque: cracks, color coats, EIFS, water damage, winter work, HOA colors, care and how estimates work.',
     crumbs: [{ name: 'FAQ', path: PATHS.faq }],
@@ -149,7 +149,7 @@ export const PAGES: PageDef[] = [
   }),
   page({
     path: PATHS.quote,
-    title: 'Free Stucco Estimate | Albuquerque Stucco',
+    title: 'Free Stucco Estimate in Albuquerque, NM | Albuquerque Stucco',
     description:
       'Request a free on-site stucco estimate. Answer a few quick questions and we’ll reach out to schedule a time to look at your walls.',
     crumbs: [{ name: 'Get a Quote', path: PATHS.quote }],

@@ -10,7 +10,7 @@ export function GalleryPage() {
   const real = hasRealPhotos(GALLERY);
   return (
     <>
-      <PageHero title="Stucco Project Gallery">
+      <PageHero title="Stucco Project Gallery: Albuquerque Area">
         <p>
           {real
             ? 'A look at stucco repairs, color coats and re-stucco projects around Albuquerque.'

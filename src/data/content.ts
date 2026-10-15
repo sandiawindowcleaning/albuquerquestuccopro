@@ -79,10 +79,3 @@ export const PROCESS_STEPS: ProcessStep[] = [
     ],
   },
 ];
-
-export const HOME_TRUST_POINTS = [
-  'Free on-site estimate',
-  'Texture and color matched',
-  'Serving the Albuquerque metro',
-  'Written estimates, no pressure',
-];

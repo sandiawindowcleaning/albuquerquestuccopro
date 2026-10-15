@@ -43,7 +43,7 @@ function PageShell({ def }: { def: PageDef }) {
 
 export function App() {
   return (
-    <div className="pb-14 md:pb-0">
+    <div className="pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pb-0">
       <Routes>
         {PAGES.map((p) => (
           <Route key={p.path} path={p.path} element={<PageShell def={p} />} />

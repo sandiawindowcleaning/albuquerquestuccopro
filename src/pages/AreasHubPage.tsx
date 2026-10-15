@@ -8,7 +8,7 @@ import { h2, lead } from '../lib/ui';
 export function AreasHubPage() {
   return (
     <>
-      <PageHero title="Stucco Service Areas">
+      <PageHero title="Stucco Service Areas Around Albuquerque">
         <p>
           Albuquerque Stucco is based in Albuquerque and works across the metro, Sandoval and Valencia counties and the
           East Mountains. Pick your area to see what matters for stucco there.

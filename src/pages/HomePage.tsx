@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Phone } from 'lucide-react';
+import { Check, House, Phone } from 'lucide-react';
 import { ResponsiveImage } from '../components/ResponsiveImage';
-import { TrustRow } from '../components/TrustRow';
+import { HeroLeadForm } from '../components/HeroLeadForm';
 import { CallLink } from '../components/CallLink';
 import { Section } from '../components/Section';
 import { ServiceGrid } from '../components/ServiceCard';
@@ -11,15 +11,21 @@ import { AreaLinks } from '../components/AreaLinks';
 import { FaqList } from '../components/FaqList';
 import { GalleryGrid, hasRealPhotos } from '../components/GalleryGrid';
 import { FinancingSlot, ReviewsSlot, TrustBadgesSlot } from '../components/Slots';
-import { BUSINESS } from '../config/business';
+import { BUSINESS, fullAddress, isPlaceholder } from '../config/business';
 import { GALLERY, HERO_IMAGE, PHOTOS } from '../config/images';
 import { SERVICES } from '../data/services';
 import { AREAS } from '../data/areas';
-import { HOME_BENEFITS, HOME_TRUST_POINTS } from '../data/content';
+import { HOME_BENEFITS } from '../data/content';
 import { HOME_FAQS } from '../data/faqs';
 import { HERO_SIZES } from '../lib/images';
 import { PATHS } from '../lib/paths';
 import { btn, container, eyebrow, h2, lead } from '../lib/ui';
+
+const HERO_POINTS = [
+  'Free on-site inspection and measurement',
+  'Texture and color matched so repairs don’t stand out',
+  'Traditional and synthetic (EIFS), with honest advice on repair vs. recoat',
+];
 
 const STUCCO_SURFACES = [
   'Homes and casitas',
@@ -32,7 +38,7 @@ const STUCCO_SURFACES = [
 export function HomePage() {
   return (
     <>
-      {/* ── Hero ── */}
+      {/* ── Hero: pitch on the left, inspection form card on the right ── */}
       <section className="relative isolate overflow-hidden bg-ink">
         <ResponsiveImage
           file={HERO_IMAGE.file}
@@ -41,26 +47,46 @@ export function HomePage() {
           priority
           className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/80 via-ink/65 to-ink/85 sm:bg-gradient-to-r sm:from-ink/90 sm:via-ink/70 sm:to-ink/30" />
-        <div className={`${container} py-16 sm:py-24 lg:py-28`}>
-          <div className="max-w-2xl">
-            <p className={`${eyebrow} !text-sun-400`}>Albuquerque · Rio Rancho · Corrales and nearby</p>
-            <h1 className="mt-4 font-display text-[2.6rem] font-semibold leading-[1.05] text-sand-50 sm:text-6xl">
-              Stucco Repair for Albuquerque Homes
-            </h1>
-            <p className="mt-5 text-lg leading-relaxed text-sand-100 sm:text-xl">
-              Cracks repaired, water damage fixed and faded walls brought back with a fresh color coat, matched to your home’s texture.
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/85 via-ink/75 to-ink/90 lg:bg-gradient-to-r lg:from-ink/90 lg:via-ink/75 lg:to-ink/50" />
+        <div className={`${container} grid gap-10 pb-12 pt-10 sm:pb-16 sm:pt-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:gap-12 lg:pb-20 lg:pt-8`}>
+          <div className="lg:pt-16">
+            <p className={`${eyebrow} flex items-center gap-3 !text-sun-400`}>
+              <span className="h-px w-8 bg-sun-400" aria-hidden="true" />
+              Locally owned in Albuquerque, New Mexico
             </p>
+            <h1 className="mt-5 font-display text-[clamp(2rem,8.4vw,3.75rem)] font-semibold leading-[1.05] text-sand-50 [text-wrap:balance] lg:text-5xl xl:text-[3.25rem]">
+              Stucco repair made for Albuquerque homes.
+            </h1>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-sand-100">
+              Crack repair, patching, recoats and full re-stucco for traditional and synthetic stucco, matched to your
+              existing texture and color and built to handle high-desert sun, monsoon rain and freeze-thaw winters.
+            </p>
+            <ul className="mt-7 space-y-3">
+              {HERO_POINTS.map((p) => (
+                <li key={p} className="flex gap-3 text-sand-50">
+                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sun-400 text-ink">
+                    <Check className="h-4 w-4" strokeWidth={3} aria-hidden="true" />
+                  </span>
+                  {p}
+                </li>
+              ))}
+            </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link to={PATHS.quote} className={btn.quote}>Get a Free Quote</Link>
-              <CallLink location="hero" className={btn.onDark}>
-                <Phone className="h-4 w-4" aria-hidden="true" /> {BUSINESS.phoneDisplay}
+              <Link to={PATHS.services} className={`${btn.quote} min-h-[3.25rem]`}>See Our Services</Link>
+              <CallLink location="hero" className={`${btn.onDark} min-h-[3.25rem]`}>
+                <Phone className="h-4 w-4" aria-hidden="true" /> Call {BUSINESS.phoneDisplay}
               </CallLink>
             </div>
-            <div className="mt-9">
-              <TrustRow items={HOME_TRUST_POINTS} />
-              <TrustBadgesSlot tone="dark" />
-            </div>
+            <p className="mt-6 flex items-start gap-2 text-sand-200">
+              <House className="mt-0.5 h-5 w-5 shrink-0 text-sun-400" aria-hidden="true" />
+              {isPlaceholder(BUSINESS.address.street)
+                ? 'Serving Albuquerque, Rio Rancho and surrounding areas'
+                : fullAddress}
+            </p>
+            <TrustBadgesSlot tone="dark" />
+          </div>
+          <div id="inspection" className="scroll-mt-24 lg:-mb-4" data-hides-mobile-bar="">
+            <HeroLeadForm />
           </div>
         </div>
       </section>

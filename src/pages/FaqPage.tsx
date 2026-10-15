@@ -8,7 +8,7 @@ import { h2 } from '../lib/ui';
 export function FaqPage() {
   return (
     <>
-      <PageHero title="Stucco FAQ">
+      <PageHero title="Albuquerque Stucco FAQ">
         <p>
           Answers to the questions Albuquerque homeowners ask most about stucco repair, color coats and re-stucco. Don’t see yours? Call{' '}
           <CallLink location="faq-hero" className="font-semibold text-chile-700 underline" />.

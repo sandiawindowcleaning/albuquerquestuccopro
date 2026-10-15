@@ -12,3 +12,6 @@ public/images
 *service-account*.json
 *-sa-key.json
 tools/gsc-mcp/*.key.json
+
+# Local QA screenshots (not part of the site)
+qa-screenshots/

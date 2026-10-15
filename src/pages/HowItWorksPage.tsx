@@ -20,7 +20,7 @@ const PREP = [
 export function HowItWorksPage() {
   return (
     <>
-      <PageHero title="How It Works: Inspection to Walkthrough">
+      <PageHero title="How Stucco Repair Works in Albuquerque">
         <p>
           Four steps, one point of contact. Here’s what happens from the moment you reach out to the day we walk the
           finished work with you.

@@ -21,6 +21,7 @@ export const LEAD_SUBJECT = 'New Stucco ABQ Lead';
 export const FORM_SOURCE = {
   quote: 'Quote page - quote wizard',
   contact: 'Contact page - contact form',
+  inspection: 'Home page - hero inspection form',
 } as const;
 
 /**
@@ -57,7 +58,21 @@ export interface ContactLead {
   message: string;
 }
 
-export type Lead = QuoteLead | ContactLead;
+export interface InspectionLead {
+  formName: 'inspection';
+  firstName: string;
+  lastName: string;
+  phone: string;
+  zip: string;
+  email: string;
+  projectType: string;
+  areaAffected: string;
+  timeframe: string;
+  stuccoType: string;
+  message: string;
+}
+
+export type Lead = QuoteLead | ContactLead | InspectionLead;
 
 export class LeadError extends Error {}
 
@@ -68,13 +83,27 @@ function toPayload(lead: Lead, honeypot: string): Record<string, string> {
     form_source: FORM_SOURCE[lead.formName],
     page_url: window.location.href,
     _gotcha: honeypot,
-    name: lead.name,
-    phone: lead.phone,
-    email: lead.email,
   };
-  if (lead.formName === 'contact') return { ...common, message: lead.message };
+  if (lead.formName === 'inspection') {
+    return {
+      ...common,
+      name: `${lead.firstName} ${lead.lastName}`.trim(),
+      first_name: lead.firstName,
+      last_name: lead.lastName,
+      phone: lead.phone,
+      zip: lead.zip,
+      email: lead.email,
+      project_type: lead.projectType,
+      area_affected: lead.areaAffected,
+      timeframe: lead.timeframe,
+      stucco_type: lead.stuccoType,
+      message: lead.message,
+    };
+  }
+  const contact = { ...common, name: lead.name, phone: lead.phone, email: lead.email };
+  if (lead.formName === 'contact') return { ...contact, message: lead.message };
   return {
-    ...common,
+    ...contact,
     address: lead.address,
     zip: lead.zip,
     service_type: lead.area,

@@ -23,6 +23,13 @@ export function trackQuoteSubmit(details: { goal?: string; openings?: string; ar
   fbq('track', 'Lead');
 }
 
+/** Home page hero inspection form submitted successfully. */
+export function trackInspectionSubmit(details: { project_type?: string; area_affected?: string; timeframe?: string }) {
+  gtag('event', 'generate_lead', { form_name: 'inspection', ...details });
+  adsConversion(TRACKING.googleAdsQuoteLabel);
+  fbq('track', 'Lead');
+}
+
 /** Contact form submitted successfully. */
 export function trackContactSubmit() {
   gtag('event', 'generate_lead', { form_name: 'contact' });

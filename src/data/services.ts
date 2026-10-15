@@ -11,7 +11,7 @@ export const SERVICES: Service[] = [
     icon: 'wrench',
     cardBlurb:
       'Cracks, holes, chips and damaged corners repaired, textured to match and color-blended so the fix doesn’t stand out.',
-    seoTitle: 'Stucco Repair Albuquerque NM | Albuquerque Stucco',
+    seoTitle: 'Stucco Repair in Albuquerque, NM | Albuquerque Stucco',
     seoDescription:
       'Stucco crack and damage repair for Albuquerque homes. We find the cause, repair the wall, match the texture and blend the color. Free on-site estimate.',
     h1: 'Stucco Repair in Albuquerque',
@@ -74,7 +74,7 @@ export const SERVICES: Service[] = [
     icon: 'home',
     cardBlurb:
       'Full re-stucco when the old stucco is failing, and new stucco for additions, garages and remodels.',
-    seoTitle: 'Re-Stucco Albuquerque NM | Albuquerque Stucco',
+    seoTitle: 'Re-Stucco in Albuquerque, NM | Albuquerque Stucco',
     seoDescription:
       'Full re-stucco and new stucco for Albuquerque homes, additions and remodels. Traditional cement stucco and modern finishes. Free on-site estimate.',
     h1: 'Re-Stucco & New Stucco in Albuquerque',
@@ -137,7 +137,7 @@ export const SERVICES: Service[] = [
     icon: 'paint-roller',
     cardBlurb:
       'A fresh finish coat over sound stucco to fix fading, chalking and patchy color, or to change the color of the house.',
-    seoTitle: 'Stucco Color Coat Albuquerque | Albuquerque Stucco',
+    seoTitle: 'Stucco Color Coats in Albuquerque, NM | Albuquerque Stucco',
     seoDescription:
       'Stucco color coats and recoats in Albuquerque. Fix faded, chalky or patchy stucco, or change your home’s color. Cement and acrylic finishes. Free estimate.',
     h1: 'Stucco Color Coat & Recoat in Albuquerque',
@@ -199,7 +199,7 @@ export const SERVICES: Service[] = [
     icon: 'cloud-rain',
     cardBlurb:
       'Bubbling, stained or soft stucco, leaking parapets and canales. We find where water is getting in and fix it.',
-    seoTitle: 'Stucco Water Damage Repair Albuquerque | ABQ Stucco',
+    seoTitle: 'Stucco Water Damage Repair in Albuquerque, NM | ABQ Stucco',
     seoDescription:
       'Stucco water damage, parapet and canale repair in Albuquerque. We trace where water gets in, repair the wall and seal it. Free on-site estimate.',
     h1: 'Stucco Water Damage & Parapet Repair in Albuquerque',
@@ -262,7 +262,7 @@ export const SERVICES: Service[] = [
     icon: 'layers',
     cardBlurb:
       'Repairs to synthetic stucco (EIFS): dents, holes, hail damage, cracked base coat and failed sealant joints.',
-    seoTitle: 'EIFS Synthetic Stucco Repair Albuquerque | ABQ Stucco',
+    seoTitle: 'EIFS Stucco Repair in Albuquerque, NM | Albuquerque Stucco',
     seoDescription:
       'EIFS and synthetic stucco repair in Albuquerque. Dents, holes, hail damage and sealant joints repaired with matching texture and color. Free estimate.',
     h1: 'EIFS & Synthetic Stucco Repair in Albuquerque',
@@ -325,7 +325,7 @@ export const SERVICES: Service[] = [
     icon: 'fence',
     cardBlurb:
       'Stucco for new and existing block walls, courtyard walls and fences, plus repairs to cracked or crumbling wall stucco.',
-    seoTitle: 'Stucco Garden Walls Albuquerque | Albuquerque Stucco',
+    seoTitle: 'Stucco Garden Walls in Albuquerque, NM | Albuquerque Stucco',
     seoDescription:
       'Stucco for garden walls, courtyard walls and block fences in Albuquerque. New stucco, color coats and crack repair to match your home. Free estimate.',
     h1: 'Stucco Garden Walls & Block Fences in Albuquerque',
