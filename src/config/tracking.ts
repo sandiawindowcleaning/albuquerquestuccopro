@@ -12,16 +12,16 @@ export const TRACKING = {
   ga4Id: 'G-PLACEHOLDER',
 
   /** Meta (Facebook) Pixel ID, numeric string */
-  metaPixelId: 'PLACEHOLDER_META_PIXEL_ID',
+  metaPixelId: '', // not running Meta ads
 
   /** Google Ads account tag, e.g. AW-123456789 */
-  googleAdsId: 'AW-PLACEHOLDER',
+  googleAdsId: '', // not running Google Ads
 
   /** Conversion label for "quote form submitted" (the part after the slash) */
-  googleAdsQuoteLabel: 'PLACEHOLDER_QUOTE_CONVERSION_LABEL',
+  googleAdsQuoteLabel: '',
 
   /** Conversion label for "tel: link clicked". Can be the same as the quote label. */
-  googleAdsCallLabel: 'PLACEHOLDER_CALL_CONVERSION_LABEL',
+  googleAdsCallLabel: '',
 } as const;
 
 export const trackingReady = (id: string) => !!id && !id.includes('PLACEHOLDER');

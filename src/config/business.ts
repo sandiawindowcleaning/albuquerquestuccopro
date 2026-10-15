@@ -24,35 +24,36 @@ export const BUSINESS = {
 
   /** Shown in the footer, on the Contact page and in schema. */
   address: {
-    street: 'PLACEHOLDER_STREET',
+    street: '5643 Jefferson St NE',
     city: 'Albuquerque',
     region: 'NM',
-    postalCode: 'PLACEHOLDER_ZIP',
+    postalCode: '87109',
     country: 'US',
   },
 
-  /** From the GBP pin. */
-  geo: null as { latitude: number; longitude: number } | null,
+  /** Geocoded from the street address (OpenStreetMap, building level). */
+  geo: { latitude: 35.1452752, longitude: -106.5967513 } as { latitude: number; longitude: number } | null,
 
   /**
    * Opening hours. Kept out of the site and schema until `confirmed` is true.
    * Days use schema.org names (Monday … Sunday), times are 24h "HH:MM".
    */
   hours: {
-    confirmed: false,
-    display: 'PLACEHOLDER_HOURS',
+    confirmed: true,
+    display: 'Open 24 hours, 7 days a week',
+    // Google's documented form for "open 24 hours": 00:00 to 23:59.
     spec: [
       {
-        days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
-        closes: '17:00',
+        days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
   },
 
   /** Full profile URLs. Empty strings are ignored (no sameAs, no footer link). */
   social: {
-    googleBusinessProfile: '',
+    googleBusinessProfile: 'https://share.google/GAEAxzn367672GXR1',
     facebook: '',
     instagram: '',
     youtube: '',
@@ -64,13 +65,13 @@ export const BUSINESS = {
    * link's kgmid). Stays the same if the listing is renamed. Used in schema
    * sameAs only, not shown on the page.
    */
-  googleEntityUrl: '',
+  googleEntityUrl: 'https://www.google.com/search?kgmid=/g/11zyj328gx',
 
   /**
    * Google Maps embed for the Contact page: the src="..." value from Google
    * Maps → Share → Embed a map. Empty = no map shown.
    */
-  mapEmbedUrl: '',
+  mapEmbedUrl: 'https://maps.google.com/maps?q=5643+Jefferson+St+NE,+Albuquerque,+NM+87109&output=embed',
 
   /** Short line used in the footer and Organization schema. */
   tagline: 'Stucco repair, re-stucco and color coats for Albuquerque homes.',
